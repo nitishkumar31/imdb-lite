@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watchlist</title>
+    <!-- style css link for index page  -->
+    <link rel="stylesheet" href="./myfav.css" />
+    <!-- this is common css  -->
+    <link rel="stylesheet" href="../Styles/style.css" />
+
+    <!-- google font link for awesome text  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!-- body section begins here -->
+  <body>
+    <!-- this is the main container of website  -->
+    <section class="main">
+      <nav class="nav-menu">
+        <!-- nav 1st child  -->
+        <div class="logo-menu" onclick="showMenu()">
+          <div class="imdb-logo">
+            <img src="../assets/IMDB.png" alt="imdb-logo" />
+          </div>
+          <div class="bar-menu hover">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <!-- <div class="my-fav"><h1>Watchlist</h1></div> -->
+        <!-- nav 3rd child  -->
+        <div class="fabs-login">
+          <div id="img-container im-pro" class="hover imdbpro">
+            <img
+              src="../assets/white-imdb.png"
+              alt="IMDB"
+              height="15rem"
+              class="ipro-images"
+            />
+            <img
+              src="../assets/pro.png"
+              alt="PRO"
+              height="15rem"
+              class="ipro-images"
+            />
+          </div>
+          <!-- this small page pop will be shown when you hover IMDbPro option  -->
+          <!-- ----------- -->
+          <div class="pop-up">
+            <img src="../assets/pop-up.png" alt="popup-img" />
+          </div>
+          <!-- --------------- -->
+        </div>
+        <div id="v-bar">|</div>
+      </nav>
+
+      <!-- side menu of imdb web  -->
+
+      <div class="side-option" id="side">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <br />
+        <br />
+        <ul class="side-list">
+          <li>
+            <!-- all fa-solid class are icon which i takes from font awsome website  -->
+            <div><i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div><i class="fa-solid fa-tv"></i>&nbsp;<span>Tv Shows</span></div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div><i class="fa-solid fa-video"></i>&nbsp;<span>Watch</span></div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div>
+              <i class="fa-solid fa-award"></i>&nbsp;<span
+                >Awards & Events</span
+              >
+            </div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div>
+              <i class="fa-solid fa-person"></i>&nbsp;<span>Celebs</span>
+            </div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div>
+              <i class="fa-solid fa-globe"></i>&nbsp;<span>Community</span>
+            </div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <br />
+          <br />
+          <li>
+            <div>
+              <h4>IMDbPro</h4>
+              <p style="font-size: 15px">For Industrial Professionals</p>
+            </div>
+            <div><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Favorites movie list related html comes here  -->
+      <!-- this is the header part  -->
+      <section id="header">
+        <!-- this is the back button to go to the main page  -->
+        <button id="home" class="fab-btn">
+          <a href="../index.html"><i class="fas fa-chevron-left"></i>Home</a>
+        </button>
+        <!-- title of the website  -->
+        <span>My Watchlist</span>
+        <!-- button to clear all the fav movies -->
+        <div id="btns">
+          <button id="clear-whole-list" class="fab-btn">Clear All</button>
+        </div>
+      </section>
+      <!-- all the movies will be displayed here when call API  -->
+      <div id="list-container">
+        <!-- dynamic html container and related element come across this list container  -->
+      </div>
+    </section>
+
+    <!-- here we use font awsome script toolkit -->
+    <script
+      src="https://kit.fontawesome.com/74894dafb2.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- external script for this page  -->
+    <script type="text/javascript" src="./myfav.js"></script>
+  </body>
+</html>

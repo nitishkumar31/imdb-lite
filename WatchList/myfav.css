@@ -1,0 +1,79 @@
+/* my-favorite css  */
+.my-fav {
+  color: #fff;
+  font-size: 1.2rem;
+  padding-top: 7px;
+}
+/* main header section css  of myfavorite page */
+#header {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin: 15px auto;
+}
+/* clear all and home btn related css  */
+.fab-btn {
+  padding: 6px 12px;
+  background-color: rgb(235, 235, 110);
+  font-size: 1rem;
+  border-radius: 5px;
+  color: black;
+  font-weight: 600;
+  border: 1px solid yellow;
+  cursor: pointer;
+}
+.fab-btn:hover {
+  background-color: aqua;
+  border: 1px solid aqua;
+}
+#header span {
+  color: rgba(0, 255, 255, 0.977);
+  font-size: 1.6rem;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+/* movies element cart  */
+#list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.movie-details {
+  margin: 20px;
+  border-radius: 20px;
+  background-color: rgb(88, 76, 33);
+}
+/* movie image  */
+#movieimg {
+  border-radius: 20px;
+  height: 420px;
+  width: 310px;
+}
+/* detais css  */
+#details {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+}
+/* title of movie  */
+.title {
+  max-width: 200px;
+}
+.title a {
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+/* remove movie icon  */
+#removeicon {
+  font-size: 1.6rem;
+  color: red;
+  cursor: pointer;
+}
