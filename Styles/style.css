@@ -1,0 +1,383 @@
+/* all element contains common css  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* variable color css  */
+:root {
+  --black: black;
+  --grey: rgb(56, 56, 56);
+  --low-black: rgb(58, 57, 57);
+  --white: #fff;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* all link have common css  */
+a:link {
+  text-decoration: none;
+}
+body {
+  /* width: 100vw;
+  height: 100vh; */
+  background-color: var(--black);
+  font-family: "Didact Gothic", sans-serif;
+  position: relative;
+}
+
+/* css related to navigation section  */
+
+.imdb-logo img {
+  width: 75px;
+  /* height: 35px; */
+}
+.nav-menu {
+  height: 52px;
+  width: 100vw;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--black);
+  font-family: system-ui, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* logo menu contains logo and menu both  */
+.logo-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 15%;
+  min-width: 170px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--white);
+  cursor: pointer;
+  box-sizing: border-box;
+}
+/* css for fabs login  */
+.fabs-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  min-width: 260px;
+  font-size: 0.8rem;
+  color: var(--white);
+}
+.fabs-login h3 a {
+  color: var(--white);
+}
+/* css for search box  */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  position: relative;
+}
+/* sarch box input css  */
+.search-box input {
+  width: 100%;
+  height: 30px;
+  padding-left: 20px;
+  border-radius: 6px;
+  min-width: 200px;
+  border: none;
+  outline-style: dotted;
+  font-size: 1rem;
+}
+/* find icon  */
+#search-icon {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+}
+/* IMDB Pro icon */
+#img-container {
+  display: flex;
+  flex-direction: row;
+  height: 1rem;
+  width: 1rem;
+}
+
+.hover:hover {
+  background-color: rgb(41, 39, 39);
+  box-sizing: border-box;
+  padding: 8px 4px;
+  border-radius: 5px;
+}
+/* vertical bar */
+#v-bar {
+  color: var(--grey);
+  font-size: 2rem;
+}
+/* css for popupsection when you hover IMDbPro  */
+.pop-up {
+  box-shadow: 5px 10px 10px #5a5a5ab0;
+  width: fit-content;
+  margin: auto;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 10;
+}
+
+.pop-up img {
+  object-fit: contain;
+  border-radius: 5px;
+}
+.imdbpro:hover + .pop-up {
+  display: flex;
+}
+/* language setting icon */
+#lang {
+  cursor: pointer;
+}
+
+/* css for menu option when you click on menu side section appears to you */
+.side-option {
+  position: absolute;
+  background: #303030;
+  height: 100vh;
+  width: 300px;
+  left: -300px;
+  top: 0;
+  text-align: left;
+  z-index: 2;
+  transition: 1s;
+  font-family: "Montserrat", sans-serif;
+}
+.side-option .fa {
+  display: block;
+  color: var(--white);
+  margin: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  text-align: right;
+  height: 50px;
+  padding: 10px;
+  margin: -1px;
+  background-color: #5c5c5c;
+}
+.side-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 17px;
+  color: var(--white);
+  font-size: 1.1rem;
+}
+.side-list li:hover {
+  background-color: #47474d;
+}
+/* page navigation button css  */
+.page-navigate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+#next-page {
+  margin-left: 6rem;
+}
+.page-navigate button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 30px;
+  border-radius: 10px;
+  color: var(--black);
+  border: none;
+  background-color: #f3c418;
+  cursor: pointer;
+}
+.page-navigate button:hover {
+  /* transform: scale(1.1); */
+  background-color: #ddb217;
+}
+
+/* style for Footer section */
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #fff;
+  display: flex;
+  height: 50vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+footer > div {
+  display: inline-block;
+}
+.horizontal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.horizontal-list li {
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.horizontal-list i {
+  font-size: 0.6rem;
+}
+#div1 {
+  padding-bottom: 1rem;
+}
+#div1 button {
+  font-size: 0.9rem;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
+  border: none;
+  background-color: #f3c418;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#div1 button:hover {
+  background-color: #ddb217;
+}
+#div2 i {
+  font-size: larger;
+  padding: 0 0.5rem;
+}
+#div5 {
+  padding: 1.5rem;
+}
+
+/* responsiveness and media queries */
+/* when the screen size is 700 and less  */
+@media screen and (max-width: 700px) {
+  .nav-menu {
+    padding: 0 10px;
+  }
+  #signin {
+    display: none;
+  }
+  #lang {
+    display: none;
+  }
+  .ipro-images {
+    display: none;
+  }
+  .fabs-login {
+    width: 200px;
+    min-width: 200px;
+  }
+  .pop-up {
+    width: 70vh;
+  }
+}
+/* when the screen size is 550 and less  */
+@media screen and (max-width: 620px) {
+  .bar-menu span {
+    display: none;
+  }
+  .logo-menu {
+    min-width: 140px;
+  }
+  .fabs-login {
+    min-width: 100px;
+  }
+  .pop-up {
+    width: 100%;
+    min-width: 600px;
+  }
+}
+/* when the screen size is 380 and less  */
+@media screen and (max-width: 480px) {
+  .pop-up {
+    width: 99%;
+    min-width: 450px;
+  }
+}
+
+/* css for movie content which is coming through API  */
+/*  Classes and IDs, when we access element by script  */
+
+#movies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  /* align-items: center; */
+}
+/* movie element container css  */
+.movie-element {
+  box-sizing: border-box;
+  width: 300px;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 1px 4px 5px rgba(141, 141, 141, 0.2),
+    -2px -4px 5px rgba(218, 207, 207, 0.2);
+  background-color: #232330;
+  position: relative;
+  overflow: hidden;
+}
+/* image of movie element  */
+.movie-element img {
+  width: 100%;
+  min-height: 80%;
+  border-radius: 10px;
+}
+/* movie information box css  */
+.movie-info {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0.7rem;
+  letter-spacing: 0.5px;
+}
+/* star icon css  */
+.star-fab {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+}
+.star-fab span {
+  background-color: #b3cfd8;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+.icon-color {
+  color: red;
+  margin-top: 0.5rem;
+}
+.fa-plus {
+  margin-top: 1rem;
+}
+/* overview text related css it came when we access TMDb Api  */
+.overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1rem;
+  background-color: inherit;
+  color: #fff;
+  font-size: 0.8rem;
+  max-height: 100%;
+  transform: translateY(-101%);
+  transition: transform 0.4s ease-in;
+}
+/* css for animation when you hover container  */
+.movie-element:hover .overview {
+  transform: translateY(0);
+}
