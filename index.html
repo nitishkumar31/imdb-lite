@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMDb clone: online ratings of latest movies</title>
+    <link rel="shortcut icon" href="./assets/imdb.ico" type="image/x-icon" />
+    <!-- style css link for index page  -->
+    <link rel="stylesheet" href="./Styles/style.css" />
+
+    <!-- google font link for awsome text  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- body section begins here -->
+  <body>
+    <nav class="nav-menu">
+      <!-- nav 1st child  -->
+      <!-- show menu Functionality is used for pull side menu  -->
+      <div class="logo-menu" onclick="showMenu()">
+        <div class="imdb-logo" id="i-logo">
+          <img src="./assets/IMDB.png" alt="imdb-logo" />
+          <!-- <img src="./assets/IMDB.png" alt="imdb-logo" /> -->
+        </div>
+        <div class="bar-menu hover">
+          <i class="fa-solid fa-bars"></i> <span>Menu</span>
+        </div>
+      </div>
+      <!-- nav second child  -->
+      <div class="search-box">
+        <input
+          type="text"
+          name="searchMovie"
+          id="searchMovie"
+          placeholder="Search IMDb"
+          autocomplete="off"
+        />
+        <div id="search-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <!-- nav 3rd child  -->
+      <div class="fabs-login">
+        <div id="img-container im-pro" class="hover imdbpro">
+          <img
+            src="./assets/white-imdb.png"
+            alt="IMDB"
+            height="15rem"
+            class="ipro-images"
+          />
+          <img
+            src="./assets/pro.png"
+            alt="PRO"
+            height="15rem"
+            class="ipro-images"
+          />
+        </div>
+
+        <!-- this small page pop page will be shown when you hover IMDbPro option  -->
+        <!-- ----------- -->
+        <div class="pop-up">
+          <img src="./assets/pop-up.png" alt="popup-img" />
+        </div>
+        <!-- --------------- -->
+
+        <div id="v-bar">|</div>
+
+        <!-- 4th child  -->
+        <h3 class="hover">
+          <a href="./WatchList/myfav.html">
+            <!-- <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="ipc-icon ipc-icon--watchlist ipc-btn__icon ipc-btn__icon--pre"
+              id="iconContext-watchlist"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              role="presentation"
+            >
+              <path
+                d="M17 3c1.05 0 1.918.82 1.994 1.851L19 5v16l-7-3-7 3V5c0-1.05.82-1.918 1.851-1.994L7 3h10zm-4 4h-2v3H8v2h3v3h2v-3h3v-2h-3V7z"
+                fill="currentColor"
+              ></path>
+            </svg> -->
+            <i class="fa-solid fa-folder-plus"></i>
+            Watchlist</a
+          >
+        </h3>
+        <h3 class="hover" id="signin">
+          <a
+            href="https://www.imdb.com/registration/signin?ref=nv_generic_lgin&u=%2F"
+            target="_blank"
+            >Sign In</a
+          >
+        </h3>
+
+        <h3 class="hover" id="lang">
+          EN &nbsp;<i class="fa-solid fa-caret-down"></i>
+        </h3>
+      </div>
+    </nav>
+
+    <!-- this is the main container of website  -->
+    <section class="main">
+      <!-- navigation section html code which include logo(Menu) , searchBox , watchList(favorite movie list) , imbdPro(popup) section & signIn Imdb Functionality    -->
+
+      <!-- side menu of imdb web  -->
+      <!-- when you click menu option and logo then 
+         side option will appear and when you click cross icon then 
+         side option goes back -->
+
+      <div class="side-option" id="side">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <br />
+        <br />
+        <ul class="side-list">
+          <li>
+            <!-- here class containing fa-solid all are icons which i takes from font awsome website -->
+            <div><i class="fa-solid fa-film"></i>&nbsp;<span>Movies</span></div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div><i class="fa-solid fa-tv"></i>&nbsp;<span>Tv Shows</span></div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div><i class="fa-solid fa-video"></i>&nbsp;<span>Watch</span></div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div>
+              <i class="fa-solid fa-award"></i>&nbsp;<span
+                >Awards & Events</span
+              >
+            </div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div>
+              <i class="fa-solid fa-person"></i>&nbsp;<span>Celebs</span>
+            </div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div>
+              <i class="fa-solid fa-globe"></i>&nbsp;<span>Community</span>
+            </div>
+            <div><i class="fa-solid fa-chevron-down"></i></div>
+          </li>
+          <br />
+          <br />
+          <li>
+            <div>
+              <h4>IMDbPro</h4>
+              <p style="font-size: 15px">For Industrial Professionals</p>
+            </div>
+            <div><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- container for movie list coming from IMDB API here i access Api proprty and functionality and form dynamic Html Element that append here-->
+      <div id="movies">
+        <!-- <div class="movie-element">
+
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg" alt="image-h">
+          <div class="movie-info">
+            <h3>Movie Title</h3>
+            <div class="star-fab">
+              <span class="yellow"><i class="fa-solid fa-plus"></i></span>
+              <span class="yellow"><i class="fa-solid fa-star">&nbsp;</i>9.8</span>
+            </div>
+          </div>
+          <div class="overview">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit laborum eos nobis nam, cupiditate ducimus optio? Nobis possimus debitis suscipit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reprehenderit?
+          </div>
+
+        </div> -->
+      </div>
+
+      <!-- button for next page and prev page  -->
+      <div class="page-navigate">
+        <button id="prev-page">
+          <i class="fa-solid fa-angle-left"></i>
+          Prev
+        </button>
+        <button id="next-page">
+          Next
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <div id="div1">
+        <button>Sign in for more access</button>
+      </div>
+      <div id="div2">
+        <ul class="horizontal-list">
+          <li><i class="fa-brands fa-tiktok"></i></li>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-youtube"></i></li>
+          <li><i class="fa-brands fa-square-facebook"></i></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="horizontal-list">
+          <li>
+            Get the IMDb App <i class="fa-solid fa-up-right-from-square"></i>
+          </li>
+          <li>Help <i class="fa-solid fa-up-right-from-square"></i></li>
+          <li>Site Index <i class="fa-solid fa-up-right-from-square"></i></li>
+          <li>IMDbPro <i class="fa-solid fa-up-right-from-square"></i></li>
+          <li>
+            Box Office Mojo <i class="fa-solid fa-up-right-from-square"></i>
+          </li>
+          <li>
+            IMDb Developer <i class="fa-solid fa-up-right-from-square"></i>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="horizontal-list">
+          <li>Press Room</li>
+          <li>Advertising <i class="fa-solid fa-up-right-from-square"></i></li>
+          <li>Jobs <i class="fa-solid fa-up-right-from-square"></i></li>
+          <li>Conditions of Use</li>
+          <li>Privacy Policy</li>
+          <li>Your Ads Privacy Choices</li>
+        </ul>
+      </div>
+      <div id="div5">an <i class="fa-brands fa-amazon"></i> company</div>
+    </footer>
+
+    <!-- here we use font awsome script toolkit -->
+    <script
+      src="https://kit.fontawesome.com/74894dafb2.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- external javascript for home page  -->
+    <script type="text/javascript" src="./JavaScript/script1.js"></script>
+  </body>
+</html>
