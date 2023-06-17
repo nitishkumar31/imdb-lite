@@ -40,6 +40,6 @@ These instructions will get you a copy of the project up and running on your loc
 - CSS
 - JavaScript
 
-## Authors
+## Author
 
 - [@nitishkumar31](https://github.com/nitishkumar31)
